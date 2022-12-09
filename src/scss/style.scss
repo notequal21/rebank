@@ -5,25 +5,35 @@
 @import "components/_mixins.scss";
 @import "components/_variables.scss";
 @import "components/_variables.scss";
+@import "components/_colors.scss";
+@import "components/_ui.scss";
 @import "components/_header.scss";
 @import "components/_footer.scss";
-@import "components/_ui.scss";
 @import "pages/index/_main.scss";
+@import "pages/index/_reviews.scss";
+@import "pages/index/_advantages.scss";
+@import "pages/index/_why.scss";
+@import "pages/payout/_everyday.scss";
+@import "pages/payout/_benefits.scss";
+@import "pages/payout/_how.scss";
+@import "pages/payout/_boost.scss";
 
-// fonts --------- &display=swap || &subset=cyrillic-ext
-// throught plugin
-
+@import '../../node_modules/swiper/swiper.scss';
+@import '../../node_modules/swiper/modules/navigation/navigation.scss';
 
 ::selection {}
 
 body {
-  overflow: auto; // <--- delete this if not necessary
+  overflow: auto;
+  font-family: 'Raleway';
 
-  color: red;
+  &.lock {
+    overflow: hidden;
+  }
 }
 
 .container {
-  max-width: 0px; // <--- container res +30px for padding
+  max-width: 1140px;
   margin: 0 auto;
   padding: 0 15px;
 }

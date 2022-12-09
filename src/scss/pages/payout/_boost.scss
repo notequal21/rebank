@@ -1,0 +1,74 @@
+.boost {
+  margin: 270px 0 0;
+
+  @media (max-width:1200px) {
+    margin: 150px 0 0;
+  }
+
+  @media (max-width:992px) {
+    margin: 90px 0 0;
+  }
+
+  &-body {
+    display: flex;
+    background: $purple;
+    border-radius: 43px 43px 0 0;
+    padding: 75px 100px 114px 60px;
+
+    @media (max-width:992px) {
+      border-radius: 28px 28px 0 0;
+      padding: 45px 20px 90px;
+      transform: translate(0, 20px);
+    }
+
+    @media (max-width:767px) {
+      flex-wrap: wrap;
+      padding: 35px 20px 70px;
+    }
+
+    &__title {
+      color: $white;
+
+      @media (max-width:767px) {
+        flex: 1 1 100%;
+
+        br {
+          display: none;
+        }
+      }
+    }
+
+    &__content {
+      flex: 0 0 440px;
+      margin: 0 0 0 auto;
+
+      @media (max-width:992px) {
+        flex: 1 1 100%;
+        margin: 0 0 0 40px;
+      }
+
+      @media (max-width:767px) {
+        margin: 25px 0 0;
+      }
+
+      &-text {
+        color: $white;
+      }
+
+      &-btn {
+        margin: 50px 0 0;
+        color: $white;
+        border-color: $white;
+
+        @media (max-width:767px) {
+          margin: 35px 0 0;
+        }
+
+        &:hover {
+          border-color: $gray;
+          color: $black;
+        }
+      }
+    }
+  }
+}

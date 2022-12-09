@@ -1,0 +1,216 @@
+.reviews {
+  position: relative;
+  z-index: 1;
+  padding: 165px 0 188px;
+
+  @media (max-width:767px) {
+    padding: 50px 0;
+  }
+
+  &-body {
+    max-width: 960px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+
+    &__btn {
+      display: flex !important;
+      position: relative !important;
+      top: auto !important;
+      left: auto !important;
+      right: auto !important;
+      bottom: auto !important;
+      flex: 0 0 auto !important;
+      width: 52px !important;
+      height: 52px !important;
+      border-radius: 50%;
+      background-color: $black;
+      border: 2px solid $black;
+      transition: all .4s ease;
+
+      @media (max-width:767px) {
+        display: none !important;
+      }
+
+      svg {
+        path {
+          transition: all .4s ease;
+        }
+      }
+
+      &.swiper-button-prev {
+        svg {
+          transform: scale(-1);
+        }
+      }
+
+      &.swiper-button-disabled {
+        opacity: 1 !important;
+        border-color: $gray;
+        background-color: transparent;
+
+        svg {
+          path {
+            stroke: $gray;
+          }
+        }
+      }
+
+      &::after {
+        content: none !important;
+      }
+    }
+  }
+
+  &-slider {
+    max-width: 530px;
+    margin: 0 auto;
+    min-width: 0;
+    overflow: hidden;
+
+    &__pagination {
+      display: none;
+
+      @media (max-width:767px) {
+        margin: 25px 0 0;
+        display: flex;
+        justify-content: center;
+
+        .swiper-pagination-bullet {
+          flex: 0 1 8%;
+          height: 3px;
+          background-color: $gray;
+          transition: all .4s ease;
+          border-radius: 25px;
+
+          &.swiper-pagination-bullet-active {
+            flex: 0 1 12%;
+            background-color: $purple;
+          }
+
+          &:not(:first-child) {
+            margin: 0 0 0 10px;
+          }
+        }
+      }
+    }
+
+    .swiper-slide {
+      @media (max-width:767px) {
+        display: flex;
+        flex-wrap: wrap-reverse;
+      }
+
+      .reviews-slider__text {
+        opacity: 0;
+        transform: scale(0.5);
+        transition: .8s ease opacity, .4s ease transform;
+      }
+
+      .reviews-slider__bottom {
+        opacity: 0;
+        transform: scale(0.5);
+        transition: .8s ease opacity, .4s ease transform;
+      }
+
+      &.swiper-slide-active {
+
+        .reviews-slider__text,
+        .reviews-slider__bottom {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    }
+
+    &__text {
+      display: flex;
+
+      @media (max-width:767px) {
+        flex: 1 1 100%;
+        margin: 30px 0 0;
+      }
+
+      .quote {
+        margin: 0 15px 0 0;
+
+        @media (max-width:767px) {
+          flex: 0 0 auto;
+          margin: 0 8px 0 0;
+          width: 20px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: top;
+          }
+        }
+      }
+    }
+
+    &__bottom {
+      display: flex;
+      align-items: center;
+      margin: 84px 0 0;
+
+      @media (max-width:767px) {
+        flex: 1 1 100%;
+        margin: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+    &__person {
+      margin: 0 0 0 22px;
+
+      &-name {}
+
+      &-pos {
+        margin: 5px 0 0;
+      }
+    }
+
+    &__img {
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    &__rating {
+      margin: 0 16px 0 auto;
+      display: flex;
+
+      @media (max-width:767px) {
+        display: flex;
+        width: 100%;
+        margin: 15px auto 0;
+        justify-content: center;
+      }
+
+      &-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 31px;
+        height: 31px;
+        border: 1px solid $gray;
+        border-radius: 8px;
+
+        &:not(:first-child) {
+          margin: 0 0 0 10px;
+        }
+
+        &._none {
+          svg {
+            path {
+              fill: $gray;
+            }
+          }
+        }
+      }
+    }
+  }
+}

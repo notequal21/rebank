@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zxx">
+@@include('components/_head.html', {
+'title':'name',
+})
+
+<body>
+
+  <div class="wrapper">
+    <div class="content">
+      @@include('components/header.html')
+
+      @@include('pages/payout/_everyday.html')
+      @@include('pages/payout/_benefits.html')
+      @@include('pages/payout/_how.html')
+      @@include('pages/payout/_boost.html')
+
+    </div>
+    @@include('components/footer.html')
+  </div>
+
+  @@include('components/_js.html')
+
+</body>
+
+</html>

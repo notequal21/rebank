@@ -1,0 +1,103 @@
+.benefits {
+
+  &__title {
+    background-color: $light-blue;
+    padding: 130px 0 256px;
+    border-radius: 43px;
+    text-align: center;
+
+    @media (max-width:992px) {
+      padding: 80px 0 160px;
+      border-radius: 28px;
+    }
+
+    @media (max-width:767px) {
+      padding: 60px 0 140px;
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  &-body {
+    transform: translate(0, -166px);
+    display: flex;
+    align-items: center;
+
+    @media (max-width:992px) {
+      transform: translate(0, -100px);
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      min-height: 448px;
+      flex: 1 1 33.333%;
+      padding: 52px 42px 32px;
+      background: $white;
+
+      &:nth-child(1) {
+        box-shadow: 0px 19px 24px rgba(0, 0, 0, 0.07);
+        border-radius: 43px 0px 0 43px;
+      }
+
+      &:nth-child(2) {
+        min-height: 548px;
+        background: $yellow;
+        box-shadow: 0px 19px 24px rgba(0, 0, 0, 0.07);
+        border-radius: 43px;
+        padding: 52px 33px 32px 42px;
+      }
+
+      &:nth-child(3) {
+        box-shadow: 0px 19px 24px rgba(0, 0, 0, 0.07);
+        border-radius: 0px 43px 43px 0px;
+        padding: 52px 33px 32px 42px;
+      }
+
+      @media (max-width:992px) {
+        flex: 1 1 100%;
+        padding: 35px 20px 50px !important;
+        border-radius: 28px !important;
+        min-height: unset !important;
+
+        &:nth-child(1) {
+          border-radius: 28px 28px 0 0 !important;
+        }
+
+        &:nth-child(2) {
+          border-radius: 0 !important;
+        }
+
+        &:nth-child(3) {
+          border-radius: 0 0 28px 28px !important;
+        }
+      }
+
+      &-title {
+        text-transform: unset;
+      }
+
+      &-text {
+        position: relative;
+        margin: 34px 0 0;
+        padding: 34px 0 0;
+
+        @media (max-width:767px) {
+          margin: 20px 0 0;
+          padding: 20px 0 0;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 124px;
+          height: 2px;
+          background-color: $purple;
+        }
+      }
+    }
+  }
+}

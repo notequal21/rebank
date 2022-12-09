@@ -1,3 +1,4 @@
+import Swiper, { Navigation, Pagination } from 'swiper';
 
 export function isWebp() {
   function testWebP(callback) {
@@ -37,7 +38,7 @@ export const anchors = () => {
 export const burger = () => {
   if (document.querySelector('.header-body__burger')) {
     const openBtn = document.querySelector('.header-body__burger')
-    const menu = document.querySelector('.header-body__btns')
+    const menu = document.querySelector('.header-menu')
     const body = document.querySelector('body')
 
     let toggleBurger = () => {
@@ -134,14 +135,16 @@ export const sticky = () => {
   window.onscroll = function () { myFunction() };
 
   // Get the header
-  var header = document.getElementById("myHeader");
+  var header = document.querySelector(".header");
 
   // Get the offset position of the navbar
   var sticky = header.offsetTop;
 
   // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
   function myFunction() {
-    if (window.pageYOffset >= sticky) {
+    console.log(sticky);
+
+    if (window.pageYOffset > sticky) {
       header.classList.add("sticky");
     } else {
       header.classList.remove("sticky");
@@ -187,5 +190,18 @@ export const upBtn = () => {
       click.preventDefault();
       scrollTo(0, 400);
     }
+  });
+}
+
+export const reviewSlider = () => {
+  const swiper = new Swiper('.reviews-slider', {
+    modules: [Navigation, Pagination],
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.reviews-slider__pagination',
+    },
   });
 }

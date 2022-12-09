@@ -1,7 +1,14 @@
 @font-face{
-	font-family: gemina;
+	font-family: Raleway;
 	font-display: swap;
-	src: url("../fonts/gemina.woff2") format("woff2"), url("../fonts/gemina.woff") format("woff");
-	font-weight: 400;
+	src: url("../fonts/Raleway-Medium.woff2") format("woff2"), url("../fonts/Raleway-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face{
+	font-family: Raleway;
+	font-display: swap;
+	src: url("../fonts/Raleway-Bold.woff2") format("woff2"), url("../fonts/Raleway-Bold.woff") format("woff");
+	font-weight: 700;
 	font-style: normal;
 }

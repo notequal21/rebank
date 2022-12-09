@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zxx">
+@@include('components/_head.html', {
+'title':'name',
+})
+
+<body>
+
+  <div class="wrapper">
+    <div class="content">
+      @@include('components/header.html')
+
+      <div class="_ui">
+        <div class="container">
+          <div class="_ui-body">
+            <div class="_ui-body__headers">
+              <h1>H1 - Lorem, ipsum dolor.</h1>
+              <h2>h2 - Lorem, ipsum dolor.</h2>
+              <h3>H3 - Lorem, ipsum dolor.</h3>
+              <h4>H4 - Lorem, ipsum dolor.</h1>
+            </div>
+            <div class="_ui-body__paragraphs">
+              <div class="text">Lorem, ipsum dolor.</div>
+              <div class="text text_lg">Lorem, ipsum dolor.</div>
+              <div class="text text_md">Lorem, ipsum dolor.</div>
+              <div class="text text_sm">Lorem, ipsum dolor.</div>
+              <div class="text text_xs">Lorem, ipsum dolor.</div>
+              <div class="text text_btn">Lorem, ipsum dolor.</div>
+              <div class="text text_bold">Lorem, ipsum dolor.</div>
+            </div>
+            <div class="_ui-body__btns">
+              <div class="_ui-body__btns-row">
+                <div class="btn btn_primary">
+                  primary
+                </div>
+                <div class="btn btn_primary _disabled">
+                  disabled
+                </div>
+              </div>
+              <div class="_ui-body__btns-row">
+                <div class="btn btn_second">
+                  second
+                </div>
+                <div class="btn btn_second _disabled">
+                  disabled
+                </div>
+              </div>
+              <div class="_ui-body__btns-row">
+                <div class="btn btn_link">
+                  link
+                </div>
+                <div class="btn btn_link _disabled">
+                  disabled
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    @@include('components/footer.html')
+  </div>
+
+  @@include('components/_js.html')
+
+</body>
+
+</html>
