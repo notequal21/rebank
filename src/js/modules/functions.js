@@ -1,4 +1,4 @@
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation } from 'swiper';
 
 export function isWebp() {
   function testWebP(callback) {
@@ -38,22 +38,30 @@ export const anchors = () => {
 export const burger = () => {
   if (document.querySelector('.header-body__burger')) {
     const openBtn = document.querySelector('.header-body__burger')
-    const menu = document.querySelector('.header-menu')
+    const menuBg = document.querySelector('.header-menu__bg')
+    const header = document.querySelector('.header')
+    const headerBody = document.querySelector('.header-body')
+    const menu = document.querySelector('._mobile-menu')
     const body = document.querySelector('body')
 
     let toggleBurger = () => {
       if (openBtn.classList.contains('active')) {
         openBtn.classList.remove('active')
         menu.classList.remove('active')
+        header.classList.remove('active')
+        headerBody.classList.remove('active')
         body.classList.remove('lock')
       } else {
         openBtn.classList.add('active')
         menu.classList.add('active')
+        header.classList.add('active')
+        headerBody.classList.add('active')
         body.classList.add('lock')
       }
     }
 
     openBtn.addEventListener('click', toggleBurger)
+    menuBg.addEventListener('click', toggleBurger)
   }
 }
 
@@ -195,13 +203,10 @@ export const upBtn = () => {
 
 export const reviewSlider = () => {
   const swiper = new Swiper('.reviews-slider', {
-    modules: [Navigation, Pagination],
+    modules: [Navigation],
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-      el: '.reviews-slider__pagination',
-    },
+    }
   });
 }

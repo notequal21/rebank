@@ -2,11 +2,7 @@
   padding: 196px 0 314px;
 
   @media (max-width:1200px) {
-    padding: 150px 0 200px;
-  }
-
-  @media (max-width:992px) {
-    padding: 80px 0 120px;
+    padding: 92px 0 110px;
   }
 
   @media (max-width:767px) {
@@ -21,6 +17,7 @@
 
     @media (max-width:767px) {
       justify-content: flex-start;
+      padding: 0;
     }
 
     &__img {
@@ -30,8 +27,9 @@
       pointer-events: none;
 
       @media (max-width:1200px) {
-        width: 700px;
-        top: -100px;
+        width: 630px;
+        top: -87px;
+        left: -231px;
 
         img {
           width: 100%;
@@ -40,53 +38,83 @@
         }
       }
 
-      @media (max-width:992px) {
-        width: 550px;
-        top: -60px;
-        left: -120px;
-      }
-
       @media (max-width:767px) {
-        display: none;
+        width: 466px;
+        top: -61px;
+        left: 54%;
+        transform: translate(-50%, 0);
       }
     }
 
     &__content {
 
-      @media (max-width:992px) {
-        margin: 0 0 0 320px;
+      @media (max-width:1200px) {
+        margin: 0 0 0 264px;
       }
 
       @media (max-width:767px) {
         margin: 0;
+        padding: 298px 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
 
-      &-title {}
+      &-title {
+        @media (max-width:767px) {
+          text-align: center;
+        }
+      }
 
       &-subtitle {
         color: $purple;
         margin: 6px 0 0;
+
+        @media (max-width:1200px) {
+          margin: 10px 0 0;
+        }
+
+        @media (max-width:767px) {
+          font-weight: 700;
+          line-height: 21px;
+          margin: 10px auto 0;
+          max-width: 260px;
+          text-align: center;
+        }
       }
 
       &-text {
         margin: 35px 0 0;
 
-        @media (max-width:992px) {
+        @media (max-width:1200px) {
+          margin: 30px 0 0;
+
           br {
             display: none;
           }
         }
 
         @media (max-width:767px) {
-          margin: 15px 0 0;
+          margin: 10px 0 0;
+          text-align: center;
+
+          br {
+            &._mobile {
+              display: block;
+            }
+          }
         }
       }
 
       &-btn {
         margin: 66px 0 0;
 
+        @media (max-width:1200px) {
+          margin: 30px 0 0;
+        }
+
         @media (max-width:767px) {
-          margin: 35px 0 0;
+          margin: 20px 0 0;
         }
       }
     }

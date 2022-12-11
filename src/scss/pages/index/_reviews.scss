@@ -3,15 +3,24 @@
   z-index: 1;
   padding: 165px 0 188px;
 
+  @media (max-width:1200px) {
+    padding: 67px 0 82px;
+  }
+
   @media (max-width:767px) {
-    padding: 50px 0;
+    padding: 47px 0 37px;
   }
 
   &-body {
     max-width: 960px;
     display: flex;
+    justify-content: center;
     align-items: center;
     margin: 0 auto;
+
+    @media (max-width:767px) {
+      flex-wrap: wrap;
+    }
 
     &__btn {
       display: flex !important;
@@ -29,7 +38,16 @@
       transition: all .4s ease;
 
       @media (max-width:767px) {
-        display: none !important;
+        margin: 20px 0 0 !important;
+
+        &:nth-child(1) {
+          order: 2;
+        }
+
+        &:nth-child(3) {
+          order: 3;
+          margin: 20px 0 0 30px !important;
+        }
       }
 
       svg {
@@ -68,6 +86,14 @@
     min-width: 0;
     overflow: hidden;
 
+    @media (max-width:1200px) {
+      margin: 0 35px;
+    }
+
+    @media (max-width:767px) {
+      margin: 0;
+    }
+
     &__pagination {
       display: none;
 
@@ -98,7 +124,7 @@
     .swiper-slide {
       @media (max-width:767px) {
         display: flex;
-        flex-wrap: wrap-reverse;
+        flex-wrap: wrap;
       }
 
       .reviews-slider__text {
@@ -128,16 +154,19 @@
 
       @media (max-width:767px) {
         flex: 1 1 100%;
-        margin: 30px 0 0;
       }
 
       .quote {
         margin: 0 15px 0 0;
 
+        @media (max-width:1200px) {
+          margin: 0 20px 0 10px;
+        }
+
         @media (max-width:767px) {
           flex: 0 0 auto;
-          margin: 0 8px 0 0;
-          width: 20px;
+          margin: 0 24px 0 4px;
+          width: 30px;
 
           img {
             width: 100%;
@@ -154,16 +183,22 @@
       align-items: center;
       margin: 84px 0 0;
 
+      @media (max-width:1200px) {
+        margin: 42px 0 0;
+      }
+
       @media (max-width:767px) {
+        margin: 20px 0 0;
         flex: 1 1 100%;
-        margin: 0;
-        flex-wrap: wrap;
-        justify-content: center;
       }
     }
 
     &__person {
       margin: 0 0 0 22px;
+
+      @media (max-width:767px) {
+        margin: 0 0 0 12px;
+      }
 
       &-name {}
 
@@ -173,6 +208,7 @@
     }
 
     &__img {
+      flex: 0 0 auto;
       width: 62px;
       height: 62px;
       border-radius: 50%;
@@ -185,8 +221,7 @@
 
       @media (max-width:767px) {
         display: flex;
-        width: 100%;
-        margin: 15px auto 0;
+        margin: 0 0 0 auto;
         justify-content: center;
       }
 
@@ -199,8 +234,21 @@
         border: 1px solid $gray;
         border-radius: 8px;
 
+        @media (max-width:767px) {
+          width: 25px;
+          height: 25px;
+
+          svg {
+            width: 13px;
+          }
+        }
+
         &:not(:first-child) {
           margin: 0 0 0 10px;
+
+          @media (max-width:767px) {
+            margin: 0 0 0 8px;
+          }
         }
 
         &._none {

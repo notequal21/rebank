@@ -3,11 +3,11 @@
   background-color: $light-blue;
 
   @media (max-width:1200px) {
-    padding: 80px 0;
+    padding: 50px 0;
   }
 
   @media (max-width:767px) {
-    padding: 50px 0;
+    padding: 30px 0;
   }
 
   &-card {
@@ -17,17 +17,21 @@
     padding: 65px 60px;
     min-height: 304px;
 
-    @media (max-width:767px) {
-      border-radius: 28px;
+    @media (max-width:1200px) {
+      padding: 60px 55px 60px 60px;
       flex-wrap: wrap;
-      padding: 25px;
+      min-height: auto;
+    }
+
+    @media (max-width:767px) {
+      padding: 40px 30px;
     }
 
     &:not(:first-child) {
       margin: 30px 0 0;
 
       @media (max-width:767px) {
-        margin: 20px 0 0;
+        margin: 10px 0 0;
       }
     }
 
@@ -45,7 +49,7 @@
       .advantages-card__text {
         margin: 20px 0 0;
 
-        @media (max-width:767px) {
+        @media (max-width:1200px) {
           margin: 0;
         }
       }
@@ -56,26 +60,37 @@
 
         &:hover {
           color: $black;
-          border-color: $gray;
+          background-color: $white;
+          border-color: $white;
         }
       }
 
       &.advantages-card {
         padding: 56px 60px !important;
 
+        @media (max-width:1200px) {
+          padding: 60px 55px 60px 60px !important;
+        }
+
+
         @media (max-width:767px) {
-          padding: 25px !important;
+          padding: 40px 30px !important;
         }
       }
     }
 
     &__title {
       @media (max-width:1200px) {
-        flex: 1 1 50%;
+        max-width: 500px;
+
+        br {
+          display: none;
+        }
       }
 
       @media (max-width:767px) {
         flex: 1 1 100%;
+        text-align: center;
       }
     }
 
@@ -85,25 +100,50 @@
       padding: 10px 0 0;
 
       @media (max-width:1200px) {
-        flex: 1 1 50%;
-        margin: 0 0 0 40px;
+        margin: 30px 0 0;
+        flex: 1 1 100%;
+        padding: 0;
       }
 
       @media (max-width:767px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         flex: 1 1 100%;
         margin: 20px 0 0;
       }
     }
 
-    &__text {}
+    &__text {
+      @media (max-width:1200px) {
+        br {
+          display: none;
+        }
+      }
+
+      @media (max-width:767px) {
+        flex: 1 1 100%;
+        text-align: center;
+      }
+    }
 
     &__btn {
       margin: 45px 0 0;
 
+      &:hover {
+        color: $white;
+        background-color: $black;
+        border-color: $black;
+      }
+
+      @media (max-width:1200px) {
+        margin: 20px 0 0;
+      }
+
       @media (max-width:767px) {
-        margin: 35px 0 0;
-        padding: 0 35px;
-        width: 100%;
+        flex: 0 0 auto;
+        margin: 20px 0 0;
+        padding: 0 50px;
       }
     }
   }
